@@ -193,7 +193,7 @@ class MyApp extends StatelessWidget {
                 Column(
                   children: [
                     Image.network(
-                      'https://cdn.shopify.com/s/files/1/1824/2901/files/MilaniBrushes_PDP_Swatch_Brush_E110_640x640.jpg?v=1685654482',
+                      'https://kyo.vn/wp-content/uploads/2019/10/Charlotte-tilbury-coachella-coral.jpg',
                       width: 80, // Chỉnh chiều rộng của hình ảnh
                       height: 100, // Chỉnh chiều cao của hình ảnh
                       fit: BoxFit
@@ -239,7 +239,7 @@ class MyApp extends StatelessWidget {
                     ),
                     SizedBox(height: 8), // Khoảng cách giữa hình ảnh và văn bản
                     Text(
-                      'Milani Cosmetics',
+                      'Balancing - M3',
                       style: TextStyle(
                         fontSize: 13,
                         color: Color(0xFF766B51),
@@ -273,7 +273,7 @@ class MyApp extends StatelessWidget {
                     ),
                     SizedBox(height: 8), // Khoảng cách giữa hình ảnh và văn bản
                     Text(
-                      'Energy Alpha',
+                      'Face Cream Biyokea',
                       style: TextStyle(
                         fontSize: 13,
                         color: Color(0xFF766B51),
