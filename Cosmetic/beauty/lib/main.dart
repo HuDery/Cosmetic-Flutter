@@ -1,5 +1,8 @@
+import 'package:beauty/login.dart';
 import 'package:beauty/produc.dart';
+import 'package:beauty/userDetail.dart';
 import 'package:flutter/material.dart';
+import 'package:beauty/ingredient.dart';
 
 void main(List<String> args) {
   runApp(MaterialApp(
@@ -43,19 +46,27 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
                 SizedBox(width: 10),
-                Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xFF766B51),
-                  ),
-                  child: CircleAvatar(
-                    backgroundColor: Color(0xFF766B51),
-                    child: Icon(
-                      Icons.person,
-                      size: 30,
-                      color: Colors.black,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => UserInfoScreen()),
+                    );
+                  },
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color(0xFF766B51),
+                    ),
+                    child: CircleAvatar(
+                      backgroundColor: Color(0xFF766B51),
+                      child: Icon(
+                        Icons.person,
+                        size: 30,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ),
@@ -138,6 +149,11 @@ class MyApp extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     // Handle the event when the Home button is pressed
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ComponentListScreen()),
+                    );
                   },
                   style: ButtonStyle(
                     minimumSize: MaterialStateProperty.all<Size>(Size(
