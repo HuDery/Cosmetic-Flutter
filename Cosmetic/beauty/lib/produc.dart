@@ -2,6 +2,7 @@ import 'package:beauty/product-detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'ingredient.dart';
 import 'main.dart';
 
 class Product extends StatelessWidget {
@@ -70,7 +71,11 @@ class Product extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    // Xử lý sự kiện khi nhấn nút Trang chủ
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ComponentListScreen()),
+                    );
                   },
                   style: ButtonStyle(
                     minimumSize: MaterialStateProperty.all<Size>(Size(
@@ -455,7 +460,7 @@ class Product extends StatelessWidget {
                   child: Column(
                     children: [
                       Image.network(
-                        'https://cdn.shopify.com/s/files/1/1824/2901/files/MilaniBrushes_PDP_Swatch_Brush_E110_640x640.jpg?v=1685654482',
+                        'https://biyokea.com.vn/uploads/shops/facemassage/dau-massage-mat-m006-200ml-1.jpg',
                         width: 110,
                         height: 120,
                         fit: BoxFit.cover,
