@@ -1,8 +1,15 @@
 import 'package:beauty/produc.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class ProductDetail extends StatelessWidget {
+  final List<String> shopeeLinks = [
+    'https://shopee.vn/shop1',
+    'https://shopee.vn/shop2',
+    'https://shopee.vn/shop3',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -137,33 +144,104 @@ class ProductDetail extends StatelessWidget {
                         width: 0.5,
                       ),
                     ),
-                    width: 500,
-                    height: 500,
-                    child: Stack(
-                      alignment: Alignment.center,
+                    child: Column(
                       children: [
-                        Positioned(
-                          top: 20,
-                          child: Image.network(
-                            'https://kyo.vn/wp-content/uploads/2019/10/Charlotte-tilbury-coachella-coral.jpg',
-                            width: 450,
-                            height: 400,
-                            fit: BoxFit.cover,
-                          ),
+                        Image.network(
+                          'https://biyokea.com.vn/uploads/shops/facemassage/dau-massage-mat-m006-200ml-1.jpg',
+                          width: 450,
+                          height: 400,
+                          fit: BoxFit.cover,
                         ),
-                        Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Padding(
-                            padding: EdgeInsets.only(bottom: 10),
-                            child: Text(
-                              'Son Charlotte Tilbury Matte Revolution màu Coachella coral – Hồng san hô',
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Color(0xFF766B51),
+                        Padding(
+                          padding: EdgeInsets.only(left: 10, bottom: 10),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text:
+                                        '\nTinh dầu masage mặt Calming - M006 Êm dịu',
+                                    style: TextStyle(
+                                      fontSize: 21,
+                                      color: Color(0xFF766B51),
+                                    ),
+                                  ),
+                                ],
                               ),
-                              textAlign: TextAlign.center,
+                              textAlign: TextAlign.left,
                             ),
                           ),
+                        ),
+                        Row(
+                          children: [
+                            SizedBox(width: 20),
+                            Image.asset(
+                              'assets/image/shoppe.png',
+                              width: 80,
+                              height: 80,
+                            ),
+                            SizedBox(width: 30),
+                            Expanded(
+                              child: Text('Giá bán: 220,000'),
+                            ),
+                            SizedBox(width: 0),
+                            Flexible(
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white, // Màu nền
+                                  padding: EdgeInsets.all(
+                                      0), // Xóa khoảng cách trong nút
+                                ),
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(vertical: 10),
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    'Đến nơi bán',
+                                    style: TextStyle(
+                                      color: Colors.black, // Màu chữ
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            SizedBox(width: 20),
+                            Image.asset(
+                              'assets/image/lazada.png',
+                              width: 80,
+                              height: 40,
+                            ),
+                            SizedBox(width: 30),
+                            Expanded(
+                              child: Text('Giá bán: 190,000'),
+                            ),
+                            SizedBox(width: 0),
+                            Flexible(
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white, // Màu nền
+                                  padding: EdgeInsets.all(
+                                      0), // Xóa khoảng cách trong nút
+                                ),
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(vertical: 10),
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    'Đến nơi bán',
+                                    style: TextStyle(
+                                      color: Colors.black, // Màu chữ
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -174,6 +252,7 @@ class ProductDetail extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20,
                       color: Color(0xFF766B51),
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(height: 30),
@@ -205,17 +284,15 @@ class ProductDetail extends StatelessWidget {
                                 .start, // Căn trái đoạn văn bản
                             children: [
                               Text(
-                                'Kết quả phân tích thành phần',
+                                'Công dụng',
                                 style: TextStyle(
-                                  fontSize: 25,
+                                  fontSize: 20,
                                   color: Color(0xFF766B51),
                                 ),
                               ),
-                              SizedBox(
-                                  height:
-                                      15), // Tạo khoảng cách giữa các đoạn văn bản
+                              SizedBox(height: 10),
                               Text(
-                                'Phân tích thành công, hãy kiểm tra kết quả bên dưới',
+                                'Tinh dầu hoa hồng có hương thơm nồng vậy nên loại tinh dầu thiên nhiên này luôn được sử dụng để giảm stress, chống trầm cảm và giúp ngủ ngon là một chất xúc tác tinh thần cực hiệu quả, có tác dụng kích thích tinh thần thư giãn, phấn chấn. Ngoài ra khi kết hợp với các dầu nền tự nhiên và vitamin E còn có tác dụng cân bằng độ ẩm, se khít lỗ chân lông, cho da sự êm dịu mịn màng.',
                                 style: TextStyle(
                                   fontSize: 17,
                                   color: Color(0xFF766B51),
@@ -225,20 +302,17 @@ class ProductDetail extends StatelessWidget {
                                   height:
                                       15), // Tạo khoảng cách giữa các đoạn văn bản
                               Text(
-                                'Thành phần tìm thấy:',
+                                'Cách sử dụng:',
                                 style: TextStyle(
-                                  fontSize: 17,
+                                  fontSize: 20,
                                   color: Color(0xFF766B51),
                                 ),
                               ),
-                              SizedBox(
-                                  height:
-                                      15), // Tạo khoảng cách giữa các đoạn văn bản
+                              SizedBox(height: 10),
                               Text(
-                                'Titanium Dioxide',
+                                'Sau khi rửa mặt sạch, lau khô, cho vài giọt dầu vào hai lòng bàn tay xoa đều và đưa lên massage vùng da mặt và cổ 5-10 phút, rửa lại bằng nước ấm. Lưu ý tránh để rơi tinh dầu vào mắt hoặc miệng.',
                                 style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
                                   color: Color(0xFF766B51),
                                 ),
                               ),
@@ -250,7 +324,7 @@ class ProductDetail extends StatelessWidget {
                               .center, // Căn giữa theo chiều ngang
                           children: [
                             Text(
-                              "KẾT QUẢ PHÂN TÍCH THÀNH PHẦN",
+                              "KẾT QUẢ PHÂN TÍCH SẢN PHẨM",
                               style: TextStyle(
                                 fontSize: 21,
                                 fontWeight: FontWeight.bold,
@@ -278,7 +352,7 @@ class ProductDetail extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                'Phân tích nhanh về thành phần',
+                                'Phân tích nhanh về sản phẩm',
                                 style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
