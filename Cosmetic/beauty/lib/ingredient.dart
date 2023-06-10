@@ -1,3 +1,4 @@
+import 'package:beauty/produc.dart';
 import 'package:flutter/material.dart';
 
 import 'ingredientDetails.dart';
@@ -133,16 +134,26 @@ class _ComponentListScreenState extends State<ComponentListScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(width: 20),
-                            Text(
-                              "Sản phẩm",
-                              style: TextStyle(
-                                fontSize: 17,
-                                color: Color(0xFF766351),
-                                fontWeight: FontWeight.bold,
+                            SizedBox(width: 10),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Product(),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                "Sản phẩm",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  color: Color(0xFF766351),
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
-                            SizedBox(width: 20),
+                            SizedBox(width: 10),
                             Text(
                               "Thành phần",
                               style: TextStyle(

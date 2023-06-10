@@ -203,67 +203,193 @@ class MyApp extends StatelessWidget {
               ),
             ),
             SizedBox(height: 5),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Column(
-                  children: [
-                    Image.network(
-                      'https://kyo.vn/wp-content/uploads/2019/10/Charlotte-tilbury-coachella-coral.jpg',
-                      width: 80, // Chỉnh chiều rộng của hình ảnh
-                      height: 100, // Chỉnh chiều cao của hình ảnh
-                      fit: BoxFit
-                          .cover, // Căn chỉnh hình ảnh trong kích thước đã cho
+            SingleChildScrollView(
+              padding: EdgeInsets.only(left: 20, right: 20),
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    width: 100,
+                    height: 140,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
                     ),
-                    SizedBox(height: 8), // Khoảng cách giữa hình ảnh và văn bản
-                    Text(
-                      'Milani Cosmetics',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Color(0xFF766B51),
-                      ),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/image/neutrogenahydro.jpg',
+                          width: 100,
+                          height: 90,
+                        ),
+                        SizedBox(height: 8),
+                        Container(
+                          margin: EdgeInsets.only(left: 13),
+                          child: Text(
+                            'Neutrogena Hydro Boost',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF766B51),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Image.network(
-                      'https://global-uploads.webflow.com/6256995755a7ea0a3d8fbd11/6257ec9152f14bfa7fba94ab_5fb83e67ea6cfd31432b6183_1.jpeg',
-                      width: 80, // Chỉnh chiều rộng của hình ảnh
-                      height: 100, // Chỉnh chiều cao của hình ảnh
-                      fit: BoxFit
-                          .cover, // Căn chỉnh hình ảnh trong kích thước đã cho
+                  ),
+                  SizedBox(width: 25),
+                  Container(
+                    width: 100,
+                    height: 140,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
                     ),
-                    SizedBox(height: 8), // Khoảng cách giữa hình ảnh và văn bản
-                    Text(
-                      'Perfect lighting',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Color(0xFF766B51),
-                      ),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/image/brighten.png',
+                          width: 100,
+                          height: 90,
+                        ),
+                        SizedBox(height: 8),
+                        Container(
+                          margin: EdgeInsets.only(left: 15),
+                          child: Text(
+                            'Recovery Cream',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF766B51),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Image.network(
-                      'https://global-uploads.webflow.com/6256995755a7ea0a3d8fbd11/6257ec91e864f95332e13cdc_5fb8342c08400fbc5b937215__DmFK0mB34nSmapKA2ttgS7IOBQAOnT-OrH0JcHfZAzvt3JUOoy8LjskhijfI08pW3SApdypbXjB-_PUhy-Kl9fN-ZHG4UarXkWZgKjh3uXhk7Z5NKSdyGpR9S50FA.jpeg',
-                      width: 80, // Chỉnh chiều rộng của hình ảnh
-                      height: 100, // Chỉnh chiều cao của hình ảnh
-                      fit: BoxFit
-                          .cover, // Căn chỉnh hình ảnh trong kích thước đã cho
+                  ),
+                  SizedBox(width: 25),
+                  Container(
+                    width: 100,
+                    height: 140,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
                     ),
-                    SizedBox(height: 8), // Khoảng cách giữa hình ảnh và văn bản
-                    Text(
-                      'Balancing - M3',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Color(0xFF766B51),
-                      ),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/image/AntiPollutionFacial.jpg',
+                          width: 100,
+                          height: 90,
+                        ),
+                        SizedBox(height: 8),
+                        Container(
+                          margin: EdgeInsets.only(left: 13),
+                          child: Text(
+                            'Anti Pollution Facial',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF766B51),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                )
-              ],
+                  ),
+                  SizedBox(width: 25),
+                  Container(
+                    width: 100,
+                    height: 140,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/image/dearklairs.jpg',
+                          width: 100,
+                          height: 90,
+                        ),
+                        SizedBox(height: 8),
+                        Container(
+                          margin: EdgeInsets.only(left: 15),
+                          child: Text(
+                            'Klairs All-day Airy',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF766B51),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 25),
+                  Container(
+                    width: 100,
+                    height: 140,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/image/Klairs All-day Airy.jpg',
+                          width: 100,
+                          height: 90,
+                        ),
+                        SizedBox(height: 8),
+                        Container(
+                          margin: EdgeInsets.only(left: 13),
+                          child: Text(
+                            'Klairs All-day Airy',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF766B51),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
             SizedBox(height: 10),
             const Text(
@@ -275,68 +401,193 @@ class MyApp extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Column(
-                  children: [
-                    Image.network(
-                      'https://assets.aemi.vn/images/2023/3/1678767490907-0',
-                      width: 80, // Chỉnh chiều rộng của hình ảnh
-                      height: 100, // Chỉnh chiều cao của hình ảnh
-                      fit: BoxFit
-                          .cover, // Căn chỉnh hình ảnh trong kích thước đã cho
+            SingleChildScrollView(
+              padding: EdgeInsets.only(left: 20, right: 20),
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    width: 100,
+                    height: 140,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
                     ),
-                    SizedBox(height: 8), // Khoảng cách giữa hình ảnh và văn bản
-                    Text(
-                      'Face Cream Biyokea',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Color(0xFF766B51),
-                      ),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/image/Viaggio 3D.jpg',
+                          width: 100,
+                          height: 90,
+                        ),
+                        SizedBox(height: 8),
+                        Container(
+                          margin: EdgeInsets.only(left: 4),
+                          child: Text(
+                            'Viaggio 3D',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF766B51),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Image.network(
-                      'https://assets.aemi.vn/webp/BJO_TNR_150ml_001_img1.webp',
-                      width: 80, // Chỉnh chiều rộng của hình ảnh
-                      height: 100, // Chỉnh chiều cao của hình ảnh
-                      fit: BoxFit
-                          .cover, // Căn chỉnh hình ảnh trong kích thước đã cho
+                  ),
+                  SizedBox(width: 25),
+                  Container(
+                    width: 100,
+                    height: 140,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
                     ),
-                    SizedBox(height: 8), // Khoảng cách giữa hình ảnh và văn bản
-                    Text(
-                      'Ginseng Essence',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Color(0xFF766B51),
-                      ),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/image/Peeling Shot Ampoule.jpg',
+                          width: 100,
+                          height: 90,
+                        ),
+                        SizedBox(height: 8),
+                        Container(
+                          margin: EdgeInsets.only(left: 15),
+                          child: Text(
+                            'Peeling Shot Ampoule',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF766B51),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                SizedBox(height: 8),
-                Column(
-                  children: [
-                    Image.network(
-                      'https://assets.aemi.vn/images/2023/4/1682490674576-0',
-                      width: 80, // Chỉnh chiều rộng của hình ảnh
-                      height: 100, // Chỉnh chiều cao của hình ảnh
-                      fit: BoxFit
-                          .cover, // Căn chỉnh hình ảnh trong kích thước đã cho
+                  ),
+                  SizedBox(width: 25),
+                  Container(
+                    width: 100,
+                    height: 140,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
                     ),
-                    SizedBox(height: 8), // Khoảng cách giữa hình ảnh và văn bản
-                    Text(
-                      'Rehydrate',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Color(0xFF766B51),
-                      ),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/image/Gilaa Plant Serum.png',
+                          width: 100,
+                          height: 90,
+                        ),
+                        SizedBox(height: 8),
+                        Container(
+                          margin: EdgeInsets.only(left: 15),
+                          child: Text(
+                            'Gilaa Plant Serum',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF766B51),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                )
-              ],
+                  ),
+                  SizedBox(width: 25),
+                  Container(
+                    width: 100,
+                    height: 140,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/image/Lacto Cica Mild.png',
+                          width: 100,
+                          height: 90,
+                        ),
+                        SizedBox(height: 8),
+                        Container(
+                          margin: EdgeInsets.only(left: 15),
+                          child: Text(
+                            'Lacto Cica Mild',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF766B51),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 25),
+                  Container(
+                    width: 100,
+                    height: 140,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/image/Tea Tree Heber Natural.png',
+                          width: 100,
+                          height: 90,
+                        ),
+                        SizedBox(height: 8),
+                        Container(
+                          margin: EdgeInsets.only(left: 15),
+                          child: Text(
+                            'Tea Tree Heber',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF766B51),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ]),
         ),
