@@ -14,124 +14,21 @@ class ProductDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white, // Đổi màu thành màu trắng
+          leading: IconButton(
+            color: Colors.black,
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 5.0),
             child: Column(children: [
-              SizedBox(height: 30),
-              Row(
-                children: [
-                  Spacer(), // Thêm Spacer để đẩy hình ảnh đến đầu màn hình
-                  Image.network(
-                    'https://firebasestorage.googleapis.com/v0/b/fuprojectteammanagement.appspot.com/o/images%2FLOGO%20EXE%20(1).png?alt=media&token=d0ed450d-14ba-4c8c-b055-2c08dadc042d&_gl=1*1sht7f8*_ga*NTE2NDgwMTcwLjE2Nzc2NTk3OTY.*_ga_CW55HF8NVT*MTY4NjE0MjU2MC4xNi4xLjE2ODYxNDI2MTAuMC4wLjA.',
-                    width: 100,
-                    height: 100,
-                    fit: BoxFit.cover,
-                  ),
-                  Spacer(), // Thêm Spacer để đẩy CircleAvatar đến đầu màn hình
-                  Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xFF766B51),
-                    ),
-                    child: CircleAvatar(
-                      backgroundColor: Color(0xFF766B51),
-                      child: Icon(
-                        Icons.person,
-                        size: 30,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  Spacer(), // Thêm Spacer để đẩy CircleAvatar đến cuối màn hình
-                ],
-              ),
-              Image.network(
-                'https://images.rawpixel.com/image_450/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjExMDctMDQtYS5qcGc.jpg',
-                width: double.infinity, // Chỉnh chiều rộng của hình ảnh
-                height: 50, // Chỉnh chiều cao của hình ảnh
-                fit: BoxFit.cover, // Căn chỉnh hình ảnh trong kích thước đã cho
-              ),
               SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      // Xử lý sự kiện khi nhấn nút Trang chủ
-                    },
-                    style: ButtonStyle(
-                      minimumSize: MaterialStateProperty.all<Size>(Size(
-                          30, 10)), // Chỉnh kích thước (width, height) của nút
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(10), // Chỉnh border radius
-                        ),
-                      ),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Color(0xFF766B51)),
-                    ),
-                    child: Text(
-                      'Trang chủ',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Product()),
-                      );
-                    },
-                    style: ButtonStyle(
-                      minimumSize: MaterialStateProperty.all<Size>(Size(
-                          30, 10)), // Chỉnh kích thước (width, height) của nút
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(10), // Chỉnh border radius
-                        ),
-                      ),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Color(0xFF766B51)),
-                    ),
-                    child: Text(
-                      'Sản phẩm ',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      // Handle the event when the Home button is pressed
-                    },
-                    style: ButtonStyle(
-                      minimumSize: MaterialStateProperty.all<Size>(Size(
-                          10, 10)), // Chỉnh kích thước (width, height) của nút
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(10), // Chỉnh border radius
-                        ),
-                      ),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Color(0xFF766B51)),
-                    ),
-                    child: Text(
-                      'Thành phần',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
               Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -147,7 +44,7 @@ class ProductDetail extends StatelessWidget {
                     child: Column(
                       children: [
                         Image.network(
-                          'https://biyokea.com.vn/uploads/shops/facemassage/dau-massage-mat-m006-200ml-1.jpg',
+                          'https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/a13904230f8e64cb38212b233c609a80_cb2d6fed00.jpg',
                           width: 450,
                           height: 400,
                           fit: BoxFit.cover,
@@ -161,7 +58,7 @@ class ProductDetail extends StatelessWidget {
                                 children: [
                                   TextSpan(
                                     text:
-                                        '\nTinh dầu masage mặt Calming - M006 Êm dịu',
+                                        '\nNeutrogena Hydro Boost Activating Essence Lotion',
                                     style: TextStyle(
                                       fontSize: 21,
                                       color: Color(0xFF766B51),
@@ -183,7 +80,7 @@ class ProductDetail extends StatelessWidget {
                             ),
                             SizedBox(width: 30),
                             Expanded(
-                              child: Text('Giá bán: 220,000'),
+                              child: Text('Giá bán: 355,000'),
                             ),
                             SizedBox(width: 0),
                             Flexible(
@@ -218,7 +115,7 @@ class ProductDetail extends StatelessWidget {
                             ),
                             SizedBox(width: 30),
                             Expanded(
-                              child: Text('Giá bán: 190,000'),
+                              child: Text('Giá bán: 355,000'),
                             ),
                             SizedBox(width: 0),
                             Flexible(
@@ -292,7 +189,7 @@ class ProductDetail extends StatelessWidget {
                               ),
                               SizedBox(height: 10),
                               Text(
-                                'Tinh dầu hoa hồng có hương thơm nồng vậy nên loại tinh dầu thiên nhiên này luôn được sử dụng để giảm stress, chống trầm cảm và giúp ngủ ngon là một chất xúc tác tinh thần cực hiệu quả, có tác dụng kích thích tinh thần thư giãn, phấn chấn. Ngoài ra khi kết hợp với các dầu nền tự nhiên và vitamin E còn có tác dụng cân bằng độ ẩm, se khít lỗ chân lông, cho da sự êm dịu mịn màng.',
+                                'Công dụng của Tinh chất dưỡng ẩm Neutrogena Hydro Boost Activating Essence Lotion:\n - Cấp ẩm tức thì cho làn da, thấm sâu hơn trong lớp biểu bì da.\n - Tăng cường độ ẩm và làm mềm da, tăng cường khả năng hấp thụ các dưỡng chất.\n - Giúp da trông căng mọng, sáng rỡ và khỏe mạnh lâu dài.',
                                 style: TextStyle(
                                   fontSize: 17,
                                   color: Color(0xFF766B51),
@@ -310,7 +207,7 @@ class ProductDetail extends StatelessWidget {
                               ),
                               SizedBox(height: 10),
                               Text(
-                                'Sau khi rửa mặt sạch, lau khô, cho vài giọt dầu vào hai lòng bàn tay xoa đều và đưa lên massage vùng da mặt và cổ 5-10 phút, rửa lại bằng nước ấm. Lưu ý tránh để rơi tinh dầu vào mắt hoặc miệng.',
+                                '1. Sáng và tối: thoa đều lên da sạch và khô ngay sau bước làm sạch.\n 2. Cho 1 ít tinh chất vào lòng bàn tay, ấn hai lòng bàn tay vào nhau để kích hoạt các hạt ngọc H.A. Thoa lên má, trán và cằm. Thoa đều từ giữa mặt ra ngoài.\n 3. Nên sử dụng hàng ngày để đạt hiệu quả tốt nhất.',
                                 style: TextStyle(
                                   fontSize: 17,
                                   color: Color(0xFF766B51),
@@ -364,7 +261,7 @@ class ProductDetail extends StatelessWidget {
                               const Row(
                                 children: [
                                   Icon(
-                                    Icons.check,
+                                    Icons.check_circle_outline,
                                     color: Colors.green,
                                   ),
                                   SizedBox(width: 5),
@@ -381,7 +278,7 @@ class ProductDetail extends StatelessWidget {
                               const Row(
                                 children: [
                                   Icon(
-                                    Icons.check,
+                                    Icons.check_circle_outline,
                                     color: Colors.green,
                                   ),
                                   SizedBox(width: 5),
@@ -398,8 +295,8 @@ class ProductDetail extends StatelessWidget {
                               const Row(
                                 children: [
                                   Icon(
-                                    Icons.check,
-                                    color: Colors.green,
+                                    Icons.cancel_outlined,
+                                    color: Colors.red,
                                   ),
                                   SizedBox(width: 5),
                                   Text(
@@ -415,7 +312,7 @@ class ProductDetail extends StatelessWidget {
                               const Row(
                                 children: [
                                   Icon(
-                                    Icons.check,
+                                    Icons.check_circle_outline,
                                     color: Colors.green,
                                   ),
                                   SizedBox(width: 5),
@@ -432,7 +329,7 @@ class ProductDetail extends StatelessWidget {
                               const Row(
                                 children: [
                                   Icon(
-                                    Icons.check,
+                                    Icons.check_circle_outline,
                                     color: Colors.green,
                                   ),
                                   SizedBox(width: 5),
@@ -449,12 +346,12 @@ class ProductDetail extends StatelessWidget {
                               const Row(
                                 children: [
                                   Icon(
-                                    Icons.check,
-                                    color: Colors.green,
+                                    Icons.cancel_outlined,
+                                    color: Colors.red,
                                   ),
                                   SizedBox(width: 5),
                                   Text(
-                                    'Thành phần tối thiểu',
+                                    'Dành cho tất cả loại da',
                                     style: TextStyle(
                                       fontSize: 17,
                                       color: Color(0xFF766B51),
@@ -466,7 +363,7 @@ class ProductDetail extends StatelessWidget {
                               const Row(
                                 children: [
                                   Icon(
-                                    Icons.check,
+                                    Icons.check_circle_outline,
                                     color: Colors.green,
                                   ),
                                   SizedBox(width: 5),
@@ -536,14 +433,6 @@ class ProductDetail extends StatelessWidget {
                                           color: Colors.white,
                                         ),
                                       ),
-                                      SizedBox(width: 10),
-                                      Text(
-                                        "Titanium Dioxide",
-                                        style: TextStyle(
-                                          backgroundColor: Color(0xFF766B51),
-                                          color: Colors.white,
-                                        ),
-                                      ),
                                     ],
                                   ),
                                   SizedBox(height: 10),
@@ -559,8 +448,9 @@ class ProductDetail extends StatelessWidget {
                                       Text(
                                         "Chống lão hóa",
                                         style: TextStyle(
-                                          backgroundColor: Color(0xFF766B51),
-                                          color: Colors.white,
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.bold,
+                                          color: Color(0xFF766B51),
                                         ),
                                       ),
                                       Text(
@@ -597,8 +487,9 @@ class ProductDetail extends StatelessWidget {
                                       Text(
                                         "Làm sáng da",
                                         style: TextStyle(
-                                          backgroundColor: Color(0xFF766B51),
-                                          color: Colors.white,
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.bold,
+                                          color: Color(0xFF766B51),
                                         ),
                                       ),
                                       Text(
@@ -700,13 +591,13 @@ class ProductDetail extends StatelessWidget {
                                           ),
                                           const SizedBox(width: 10),
                                           const Text(
-                                            "Da nhạy cảm",
+                                            "Da hỗn hợp",
                                             style: TextStyle(
                                               fontSize: 20,
                                               color: Color(0xFF766B51),
                                             ),
                                           ),
-                                          const SizedBox(width: 50),
+                                          const SizedBox(width: 60),
                                           ElevatedButton(
                                             style: ButtonStyle(
                                                 backgroundColor:
@@ -834,6 +725,7 @@ class ProductDetail extends StatelessWidget {
                 ],
               ),
             ]),
+            // Add your content here
           ),
         ),
       ),

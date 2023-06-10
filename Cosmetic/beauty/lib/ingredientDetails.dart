@@ -113,19 +113,6 @@ class IngredientDetail extends StatelessWidget {
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 10), // Khoảng cách giữa các đoạn text
-                    const Row(
-                      children: [
-                        Icon(
-                          Icons.check,
-                          color: Colors.green,
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Không chứa paraben',
-                          style: TextStyle(fontSize: 17),
-                        ),
-                      ],
-                    ),
                     const SizedBox(height: 7),
                     const Row(
                       children: [
@@ -135,35 +122,7 @@ class IngredientDetail extends StatelessWidget {
                         ),
                         SizedBox(width: 5),
                         Text(
-                          'Không chứa sulfate',
-                          style: TextStyle(fontSize: 17),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 7),
-                    const Row(
-                      children: [
-                        Icon(
-                          Icons.check,
-                          color: Colors.green,
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Không có cồn',
-                          style: TextStyle(fontSize: 17),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 7),
-                    const Row(
-                      children: [
-                        Icon(
-                          Icons.check,
-                          color: Colors.green,
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Không chứa silicone',
+                          'Tạo độ ẩm cho da',
                           style: TextStyle(fontSize: 17),
                         ),
                       ],
@@ -191,21 +150,7 @@ class IngredientDetail extends StatelessWidget {
                         ),
                         SizedBox(width: 5),
                         Text(
-                          'Thành phần tối thiểu',
-                          style: TextStyle(fontSize: 17),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 7),
-                    const Row(
-                      children: [
-                        Icon(
-                          Icons.check,
-                          color: Colors.green,
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Không chứa chất gây dị ứng (EU)',
+                          'Không phải là chất gây dị ứng (EU)',
                           style: TextStyle(fontSize: 17),
                         ),
                       ],
@@ -248,15 +193,10 @@ class IngredientDetail extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: 10),
-                        const Row(
+                        Row(
                           children: [
                             Text(
-                              "Titanium Dioxide",
-                              style: TextStyle(backgroundColor: Colors.grey),
-                            ),
-                            SizedBox(width: 10),
-                            Text(
-                              "Titanium Dioxide",
+                              "$tenThanhPhan",
                               style: TextStyle(backgroundColor: Colors.grey),
                             ),
                           ],
@@ -282,10 +222,10 @@ class IngredientDetail extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: 10),
-                        const Row(
+                        Row(
                           children: [
                             Text(
-                              "Titanium Dioxide",
+                              "$tenThanhPhan",
                               style: TextStyle(backgroundColor: Colors.grey),
                             ),
                           ],
@@ -311,10 +251,10 @@ class IngredientDetail extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: 10),
-                        const Row(
+                        Row(
                           children: [
                             Text(
-                              "Titanium Dioxide",
+                              "$tenThanhPhan",
                               style: TextStyle(backgroundColor: Colors.grey),
                             ),
                           ],
@@ -349,9 +289,9 @@ class IngredientDetail extends StatelessWidget {
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
                                               Color.fromARGB(
-                                                  255, 219, 217, 217))),
+                                                  255, 148, 209, 240))),
                                   onPressed: null,
-                                  child: const Text("None"),
+                                  child: const Text(""),
                                 ),
                               ],
                             ),
@@ -372,9 +312,9 @@ class IngredientDetail extends StatelessWidget {
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
                                               Color.fromARGB(
-                                                  255, 219, 217, 217))),
+                                                  255, 148, 209, 240))),
                                   onPressed: null,
-                                  child: const Text("None"),
+                                  child: const Text(""),
                                 ),
                               ],
                             ),
@@ -386,18 +326,17 @@ class IngredientDetail extends StatelessWidget {
                                 ),
                                 const SizedBox(width: 10),
                                 const Text(
-                                  "Da nhạy cảm",
+                                  "Da hỗn hợp",
                                   style: TextStyle(fontSize: 20),
                                 ),
-                                const SizedBox(width: 50),
+                                const SizedBox(width: 60),
                                 ElevatedButton(
                                   style: ButtonStyle(
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
-                                              Color.fromARGB(
-                                                  255, 148, 209, 240))),
+                                              Colors.orange)),
                                   onPressed: null,
-                                  child: const Text("1"),
+                                  child: const Text(""),
                                 ),
                               ],
                             ),
