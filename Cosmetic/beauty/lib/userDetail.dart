@@ -2,6 +2,8 @@ import 'package:beauty/login.dart';
 import 'package:beauty/main.dart';
 import 'package:flutter/material.dart';
 
+import 'cartOption.dart';
+
 class UserInfoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -98,7 +100,7 @@ class UserInfoScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 30),
+                    SizedBox(height: 10),
                     Text(
                       'Họ và tên:',
                       style: TextStyle(
@@ -111,7 +113,7 @@ class UserInfoScreen extends StatelessWidget {
                       'Lê Hà Duy',
                       style: TextStyle(fontSize: 16),
                     ),
-                    SizedBox(height: 30),
+                    SizedBox(height: 10),
                     Text(
                       'Email:',
                       style: TextStyle(
@@ -124,7 +126,7 @@ class UserInfoScreen extends StatelessWidget {
                       'duylh2011@gmail.com',
                       style: TextStyle(fontSize: 16),
                     ),
-                    SizedBox(height: 30),
+                    SizedBox(height: 15),
                     Text(
                       'Số điện thoại:',
                       style: TextStyle(
@@ -137,7 +139,7 @@ class UserInfoScreen extends StatelessWidget {
                       '0367748513',
                       style: TextStyle(fontSize: 16),
                     ),
-                    SizedBox(height: 30),
+                    SizedBox(height: 15),
                     Text(
                       'Mật khẩu:',
                       style: TextStyle(
@@ -150,6 +152,32 @@ class UserInfoScreen extends StatelessWidget {
                       '****************',
                       style: TextStyle(fontSize: 16),
                     ),
+                    SizedBox(height: 10),
+                    Text('Nâng cấp tài khoản',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold)),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PaymentScreen()),
+                        );
+                      },
+                      style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Color(0xFF766B51)),
+                        minimumSize:
+                            MaterialStateProperty.all<Size>(Size(40.0, 35.0)),
+                      ),
+                      child: Text('Nâng cấp'),
+                    )
                   ],
                 ),
               ),
