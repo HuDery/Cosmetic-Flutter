@@ -511,44 +511,54 @@ class Product extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    width: 110,
-                    height: 150,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          blurRadius: 3,
-                          offset: Offset(0, 2),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetail(),
                         ),
-                      ],
-                    ),
-                    child: Expanded(
-                      child: Column(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 5),
-                            child: Image.network(
-                              'https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/8e971a2e667f0dff6e8c6c2602c25f5d_36c0a2051f.jpg',
-                              width: 110,
-                              height: 100,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          SizedBox(height: 8),
-                          Container(
-                            margin: EdgeInsets.only(left: 20),
-                            child: Text(
-                              'Neutrogena Hydroboost',
-                              style: TextStyle(
-                                fontSize: 13,
-                                color: Color(0xFF766B51),
-                              ),
-                            ),
+                      );
+                    },
+                    child: Container(
+                      width: 110,
+                      height: 150,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            blurRadius: 3,
+                            offset: Offset(0, 2),
                           ),
                         ],
+                      ),
+                      child: Expanded(
+                        child: Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 5),
+                              child: Image.network(
+                                'https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/8e971a2e667f0dff6e8c6c2602c25f5d_36c0a2051f.jpg',
+                                width: 110,
+                                height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            SizedBox(height: 8),
+                            Container(
+                              margin: EdgeInsets.only(left: 20),
+                              child: Text(
+                                'Neutrogena Hydroboost',
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  color: Color(0xFF766B51),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
